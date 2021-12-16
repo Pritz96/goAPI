@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 )
 
 func main() {
+	fmt.Println("API has started on port 8080")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/time", timeHandler)
 	mux.HandleFunc("/hello", helloHandler)
